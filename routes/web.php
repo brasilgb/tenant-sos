@@ -5,14 +5,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::domain('{tenantsos')->group(function () {
+Route::domain('{tenantsos}')->group(function () {
     Route::get('/', function (string $tenant) {
-        return Inertia::render('Welcome');
+        return Inertia::render('dashboard');
     });
 });
 Route::domain('{tenant}.tenantsos')->group(function () {
     Route::get('/', function (string $tenant) {
-        return Inertia::render('Welcome');
+        return Inertia::render('dashboard');
     });
 });
 
